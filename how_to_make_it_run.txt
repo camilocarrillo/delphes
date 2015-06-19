@@ -1,0 +1,12 @@
+./configure --with-gzip --enable-shared --prefix=/home/miloc/delphes/pythia/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/miloc/delphes/pythia/pythia8209/lib
+./DelphesPythia8 cards/delphes_card_CMS.tcl h125SM_pythia_card.in h125SM.root
+
+#where an example of a pythia card:
+$ cat ~/delphes/Delphes-3.2.0/h125SM_pythia_card.in  
+Main:numberOfEvents = 100000
+Beams:frameType = 4
+Beams:LHEF = /home/miloc/lhe/h125SM.lhe
+25:onMode = off
+25:onIfMatch = 22 22
+
